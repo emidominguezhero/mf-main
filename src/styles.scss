@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+	height: 100svh;
+	padding: 1rem;
+	background-color: #222;
+	color: #fff;
+	overflow-y: auto;
+
+	h1 {
+		text-align: center;
+		font-weight: 200;
+	}
+}
