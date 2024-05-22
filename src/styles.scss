@@ -20,4 +20,21 @@
 		text-align: center;
 		font-weight: 200;
 	}
+
+	.button {
+		display: block;
+		padding: 0.5rem;
+		margin: 1rem auto;
+		border: none;
+		border-radius: 0.25rem;
+		background-color: #d60b67;
+		color: #fff;
+		font-size: 1rem;
+		transition: background-color ease 300ms;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #850d43;
+		}
+	}
 }

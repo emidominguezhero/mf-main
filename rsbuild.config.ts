@@ -6,10 +6,7 @@ const port = 3000;
 
 export default defineConfig({
 	server: {
-		port: port
-	},
-	dev: {
-		assetPrefix: `http://localhost:${3000}`
+		port
 	},
 	tools: {
 		rspack: (config, { appendPlugins }) => {
@@ -18,7 +15,9 @@ export default defineConfig({
 			appendPlugins([
 				new ModuleFederationPlugin({
 					name: "main",
-					exposes: {},
+					remotes: {
+						remote: `remote@${process.env.REMOTE_URL}/mf-manifest.json`
+					},
 					shared: ["react", "react-dom"]
 				})
 			]);
